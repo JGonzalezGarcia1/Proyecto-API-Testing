@@ -2,7 +2,7 @@
 
 Este proyecto implementa pruebas automatizadas para la API RestfulBooker utilizando  Karate, Maven e IntelliJ IDEA.
 
-
+ :fa-search: Escenarios de Prueba
 ### :fa-search: Escenarios de Prueba
 <p>
 El proyecto incluye pruebas para:
