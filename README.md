@@ -28,6 +28,9 @@ Para ejecutar pruebas específicas ejemplo:
   mvn clean test -Dtest=DeleteBookingRunner
 ```
 
+## API
+
+[Base URL](https://restful-booker.herokuapp.com/apidoc/index.html)
 
 ## Notas Adicionales 
 
@@ -36,9 +39,7 @@ Autenticación con token mediante
 `authentication/createToken.feature`
 
 
-## API
 
-[Base URL](https://restful-booker.herokuapp.com/apidoc/index.html)
 
 
 
