@@ -17,7 +17,7 @@ El proyecto incluye pruebas para:
 
 ## Ejecución
 
-Para ejecutar todas las pruebas desde la línea de comandos:
+Para ejecutar todas las pruebas desde la terminal:
 
 ```bash
   mvn clean test
