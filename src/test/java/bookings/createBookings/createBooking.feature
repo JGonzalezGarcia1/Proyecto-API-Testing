@@ -1,5 +1,5 @@
 Feature: Test for create bookings
-  I as a user require the ability to create a new booking with valid data and validate the response.
+  I as a user require the ability to create a new booking with valid data and validate the response
 
   Background:
     # * url url_booking
@@ -60,7 +60,7 @@ Feature: Test for create bookings
     And request "{}"
     When method POST
     Then status 500
-    #Se esperaba status 400 pero fue 500
+    #Bug: Se esperaba error 400 pero se recibió 500
     #Then status 400
     #And match response == "Bad Request"
 
