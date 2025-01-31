@@ -1,0 +1,29 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+
+#Maven / Gradle
+target/
+build/
+
+#Log files
+*.log
+
+#OS specific files
+.DS_Store
+Thumbs.db
+
+#Dependency directories
+/.mvn/
+.gradle/
+
+#Other generated files
+*.swp
+*~
+
+# VS Code #
+.vscode/
+

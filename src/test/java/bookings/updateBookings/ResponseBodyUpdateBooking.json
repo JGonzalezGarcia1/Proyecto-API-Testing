@@ -1,0 +1,14 @@
+{
+  "bookingid": "#number",
+  "booking": {
+    "firstname": "Jisseth",
+    "lastname": "Gonzalez",
+    "totalprice": 999,
+    "depositpaid": true,
+    "bookingdates": {
+      "checkin": "2025-01-01",
+      "checkout": "2025-02-01"
+    },
+    "additionalneeds": "Pool"
+  }
+}
