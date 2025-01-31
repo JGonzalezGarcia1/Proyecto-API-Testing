@@ -23,7 +23,7 @@ Feature: Tests for all GET bookings and by id
     And match response == read("classpath:bookings/getBookings/ResponseBodyGetBooking.json")
     And match response == read("classpath:bookings/getBookings/ResponseSchemaGetBooking.json")
 
-  Scenario Outline: Get booking with valid and invalid IDs
+  Scenario Outline: Get booking with invalid IDs
     Given path 'booking/' + <bookingid>
     When method GET
     Then status <expectedStatus>
@@ -35,14 +35,15 @@ Feature: Tests for all GET bookings and by id
     | '****'    | 404            |
 
   @InvalidHTTPMethod
-  Scenario: Get booking whit valid Id but Invalid HTTP Method
+  @Bug:se-esperaba-error-405-pero-se-recibió-404
+  Scenario: Get booking whit valid Id but Invalid HTTP Method.
     Given  def createBooking = call read('classpath:bookings/createBookings/createBooking.feature@CreateBooking')
     And def bookingid = createBooking.response.bookingid
     And path 'booking/' + bookingid
     And header Accept = 'application/json'
     When method POST
-    Then status 404
-    #se espera error 405 pero el estado fue 404
+    Then status 405
+    #Bug: se esperaba error 405 pero se recibió 404
 
   @InvalidPath
   Scenario: Get booking incorrect path

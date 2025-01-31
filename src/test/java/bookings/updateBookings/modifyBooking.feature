@@ -57,23 +57,7 @@ I as user require put booking by id for validate integrity of the response
     When method PUT
     Then status 403
 
-  @InvalidMethod
-  Scenario: Attempt to update booking using POST instead of PUT
-    Given def createBooking = call read('classpath:bookings/createBookings/createBooking.feature@CreateBooking')
-    And def bookingid = createBooking.response.bookingid
-    Given path 'booking/' + bookingid
 
-    And def auth_token = call read('classpath:bookings/authentication/createToken.feature')
-    And header Cookie = 'token=' + auth_token.response.token
-    And header Content-Type = 'application/json'
-    And header Accept = 'application/json'
-
-    And def requestDataJson = read('classpath:bookings/updateBookings/RequestBodyUpdateBooking.json')
-    And request requestDataJson
-    When method POST
-    Then status 404
-    And print response
-    #status code was 404, expected 405
 
 
 
