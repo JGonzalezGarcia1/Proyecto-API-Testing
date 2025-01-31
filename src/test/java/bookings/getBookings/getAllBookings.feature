@@ -30,9 +30,9 @@ Feature: Tests for all GET bookings and by id
 
   Examples:
     | bookingid | expectedStatus |
-    | -1817     | 400            |
+    | -1817     | 404            |
     | '/&(/%'   | 404            |
-    | '****      | 400            |
+    | '****'    | 404            |
 
   @InvalidHTTPMethod
   Scenario: Get booking whit valid Id but Invalid HTTP Method
